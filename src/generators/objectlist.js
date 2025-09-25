@@ -196,11 +196,10 @@ function objectlist_generator(form, od, indexes)
 	}
 
 	function subindex_padded(subindex) {
-		// pad with 0 if single digit
-		if (subindex > 9) {
-			return `${subindex}`;
-		}
-		return `0${subindex}`;
+	    // convert to hexadecimal string (uppercase)
+	    let hex = subindex.toString(16).toUpperCase();
+	    // pad with leading zero if single digit
+	    return hex.padStart(2, "0");
 	}
 	
 	/** Gets flags for objectlist item: 
