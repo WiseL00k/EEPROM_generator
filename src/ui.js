@@ -472,7 +472,7 @@ function odModalSaveChanges() {
 			alert(`Unexpected type ${objd.otype} on object ${modalform.ObjectName} being edited!`);
 			return false;
 	}
-	
+	objd.access = modalform.Access.value;
 	const odSection = odSections[odModal.odSectionName];
 
 	if (odModal.index_initial_value) {
